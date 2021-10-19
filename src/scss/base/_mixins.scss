@@ -1,0 +1,13 @@
+/** Media Queries **/
+
+@mixin mQ ($mQSize) { //mixin es como una funcion es css
+    @media (min-width: $mQSize) {
+        @content; //aca va a ir todas las propiedades que le mando en el sass;
+    }
+}
+
+@mixin grid($columnas, $espaciado ) {
+    display: grid;
+    gap: $espaciado;
+    grid-template-columns: repeat($columnas, 1fr);
+}
